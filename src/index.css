@@ -1,0 +1,68 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeIn 1s ease forwards;
+}
+
+.timeline-point {
+    @apply w-8 h-8 bg-indigo-600 rounded-full transition-transform duration-300 transform hover:scale-125;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-bg {
+    background: linear-gradient( -45deg, #111827, #1f2933, #374151, #020617 );
+    background-size: 400% 400%;
+    animation: gradientMove 18s ease infinite;
+}
+
+/* متن اصلی داخل کارت */
+.text-primary {
+    color: #e0f7e0; /* سبز خیلی روشن */
+}
+
+/* متن ثانویه */
+.text-secondary {
+    color: #a0d6a0; /* سبز متوسط */
+}
+
+.btn-primary {
+    background-color: #111827 ;
+    color: #e0f7e0;
+
+}
+
+
+    .btn-primary:hover {
+        background-color: #1f2933;
+    }
